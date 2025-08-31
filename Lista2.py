@@ -1,20 +1,39 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
-
+def cabecalho(titulo):
+    print('========================================')
+    print(f'============= {titulo} ===============')
+    print('========================================')
 #1. Faça um programa que leia dois valores numéricos inteiros e efetue
 #   a adição, caso o resultado seja maior que 10, apresentá-lo.
-
+def q1():
+    cabecalho('QUESTÃO 1')
+if soma > 10:
+    print("O resultado da soma é:", soma)
 #2. Faça um programa que leia dois valores inteiros e efetue a adição.
 #   Caso o valor somado seja maior que 20, este deverá ser apresentado
 #   somando-se a ele mais 8, caso o valor somado seja menor ou igual a
 #   20, este deverá ser apresentado subtraindo-se 5.
-
+def q2():
+    cabecalho('QUESTÃO 2')
+num1 = int(input("Digite o primeiro número inteiro: "))
+num2 = int(input("Digite o segundo número inteiro: "))
+if soma > 20:
+    resultado = soma + 8
+else:
+    resultado = soma - 5
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
-
+def q3():
+    cabecalho('QUESTÃO 3')
+num = int(input("Digite um número inteiro: "))
+if num % 3 == 0:
+    print("É múltiplo de 3")
+else:
+    print("Não é múltiplo de 3")
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
-
+ 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 
 #6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
@@ -144,3 +163,35 @@ Exercícios sobre os comandos de condição em python
 #0,3 1º grupo
 #0,4 1º e 2º grupos
 #0,5 1º, 2º e 3º grupos
+
+menu = '''
+[1] - Questão 1
+[2] - Questão 2
+[3] - Questão 3
+[4] - Questão 4
+[5] - Questão 5
+[6] - Questão 6
+[7] - Questão 7
+[8] - Questão 8
+[9] - Questão 9
+[10] - Questão 10
+[11] - Questão 11
+[12] - Questão 12
+[13] - Questão 13
+[14] - Questão 14
+[15] - Questão 15
+[16] - Questão 16
+[17] - Questão 17
+[18] - Questão 18
+[19] - Questão 19
+[20] - Questão 20
+[21] - Questão 21
+[22] - Questão 22
+[23] - Questão 23
+[24] - Questão 24
+[25] - Questão 25
+Digite a opção a ser executada: 
+'''
+
+opcao = input(menu)
+eval(f'q{opcao}()')
